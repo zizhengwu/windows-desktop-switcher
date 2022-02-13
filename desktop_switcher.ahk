@@ -187,7 +187,6 @@ getForemostWindowIdOnDesktop(n)
 MoveCurrentWindowToDesktop(desktopNumber) {
     WinGet, activeHwnd, ID, A
     DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, desktopNumber - 1)
-    switchDesktopByNumber(desktopNumber)
 }
 
 MoveCurrentWindowToRightDesktop()
